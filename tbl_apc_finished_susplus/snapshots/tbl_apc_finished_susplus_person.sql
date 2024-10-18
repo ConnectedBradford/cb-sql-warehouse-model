@@ -59,7 +59,7 @@ ROW_NUMBER() OVER (
       ORDER BY try_cast( [Start Date (Consultant Episode)] as date) DESC ,[Start Time (Episode)] desc
     ) as cnt
  from {{ source('warehouse', 'tbl_apc_finished_susplus') }}
- where [person_id]  is not null
+ where [person_id]  is not null and [person_id]<>''
 ) src
   WHERE cnt=1
 
