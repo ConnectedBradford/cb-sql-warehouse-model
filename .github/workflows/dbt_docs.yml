@@ -12,7 +12,7 @@ jobs:
   testing_1:
    runs-on: self-hosted
    env:
-	  ENV_CODE: ${{vars.ENV_CODE}}
-	  PROJ_CODE: ${{vars.PROJ_CODE}}
+    ENV_CODE: ${{vars.ENV_CODE}}
+    PROJ_CODE: ${{vars.PROJ_CODE}}
    steps:
      - run : echo "This works for u only not any more"
