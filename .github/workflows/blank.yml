@@ -4,12 +4,12 @@ name: "dbt prd pipeline"
 on:
   # Triggers the workflow on push to main branch
   push:
-  	branches:
-   	-main
+   branches:
+    -main
 
 jobs:
   # Build job
   testing:
-	runs-on: self-hosted
-	steps:
-		- run : echo "This works for u"
+   runs-on: self-hosted
+    steps:
+     - run : echo "This works for u"
