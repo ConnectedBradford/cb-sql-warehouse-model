@@ -3,9 +3,9 @@ name: "dbt prd pipeline"
 # Triggers
 on:
   # Triggers the workflow on push to main branch
-  push:
-	branches : [main]
- 
+	push:
+		branches : [main]
+
 jobs:
   # Build job
   testing:
