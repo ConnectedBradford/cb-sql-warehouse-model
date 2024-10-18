@@ -16,3 +16,6 @@ jobs:
     PROJ_CODE: ${{vars.PROJ_CODE}}
    steps:
      - run : echo "This works for u only not any more"
+     - name: "Step 01 - Checkout current branch"
+       id: step-01
+       uses: actions/checkout@v3
