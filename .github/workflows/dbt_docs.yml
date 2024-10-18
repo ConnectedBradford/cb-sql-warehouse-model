@@ -1,22 +1,15 @@
-name: "dbt prd pipeline Full"
+name: "dbt prd pipeline"
 
 # Triggers
 on:
-  # Triggers the workflow on push to main branch    
+  # Triggers the workflow on push to main branch  fdsfdsf
   push:
    branches:
-   - main
-  # Triggers the workflow manually from GUI
-# workflow_dispatch:
+    - main
 
 jobs:
   # Build job
-  build:
+  testing_1:
    runs-on: self-hosted
-   #environment: dev
-   #env:
-    #   ENV_CODE: ${{vars.ENV_CODE}}
-    #  PROJ_CODE: ${{vars.PROJ_CODE}}
    steps:
-    - name: "Print a greeting"
-    - run : echo "This works for u"
+     - run : echo "This works for u only not any more"
