@@ -17,11 +17,11 @@ jobs:
     env:
         ENV_CODE: ${{vars.ENV_CODE}}
         PROJ_CODE: ${{vars.PROJ_CODE}}
-    steps:
-        id: step-01
-        uses: actions/checkout@v3
-        - name: "Step 02 - Install dbt"
-            id: step-02
+    	steps:
+        	id: step-01
+        	uses: actions/checkout@v3
+        	- name: "Step 02 - Install dbt"
+            	id: step-02
             run: pip3 install dbt-core dbt-sqlserver
         - name: "Step 03 - Verify dbt"
             id: step-03
