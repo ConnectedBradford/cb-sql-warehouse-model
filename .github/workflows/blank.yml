@@ -9,7 +9,7 @@ on:
 jobs:
   # Build job
   testing:
-	run-on: self-hosted
+	runs-on: self-hosted
 	steps:
 		- run : |
 			echo "This works for u"
