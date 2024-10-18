@@ -14,9 +14,9 @@ jobs:
     build:
         runs-on: self-hosted
         environment: dev
-        env:
-            ENV_CODE: ${{vars.ENV_CODE}}
-            PROJ_CODE: ${{vars.PROJ_CODE}}
+        #env:
+         #   ENV_CODE: ${{vars.ENV_CODE}}
+          #  PROJ_CODE: ${{vars.PROJ_CODE}}
         steps:
             - name: "Print a greeting"
             - run : echo "This works for u"
