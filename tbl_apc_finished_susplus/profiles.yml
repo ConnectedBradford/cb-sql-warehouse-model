@@ -1,0 +1,12 @@
+tbl_apc_finished_susplus:
+  target: dev
+  outputs:
+    dev:
+      type: sqlserver
+      driver: 'ODBC Driver 17 for SQL Server' # (The ODBC Driver installed on your system)
+      server: bhts-connectyor
+      port: 1433
+      database: CB_MYSPACE_JA_1
+      schema: mart
+      windows_login: True
+      trust_cert: True

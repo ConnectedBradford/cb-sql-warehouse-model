@@ -1,0 +1,31 @@
+version: 2
+
+models:
+      - name: tbl_apc_finished_susplus_maternity
+        description: "A table for maternity details which is sourced from tbl_apc_finished_susplus and applied the filter of only
+                  valid Delivery_dates are selected"
+      - name: tbl_apc_finished_susplus_osv
+        description: "A table for Overseas details which is sourced from tbl_apc_finished_susplus and applied the filter of only
+                  valid Overseas Start Date are selected"
+      - name: tbl_apc_finished_susplus_ward
+        description: "A table for Ward details which is sourced from tbl_apc_finished_susplus and applied the filter of only
+                  valid Ward Codes are selected"
+      - name : tbl_apc_finished_susplus_opcs
+        description: "The table is an unpivoted tables of information contains OPCS code and the dates which is
+                    created from the tbl_apc_finished_susplus table "
+      - name : tbl_apc_finished_susplus_diag
+        description: "The table is an unpivoted tables of information contains Diagnosis codes  and the dates which is
+                    created from the tbl_apc_finished_susplus table "
+      - name: tbl_apc_finished_susplus_data
+        description: "A table of General inforamtion which is sourced from tbl_apc_finished_susplus and applied the filter of only
+                  "
+      - name: tbl_apc_finished_susplus_person
+        description: "A Type-2table of General inforamtion which is sourced from tbl_apc_finished_susplus and applied the filter of only
+                  "
+sources:
+  - name: warehouse
+    database: src_StagingDatabase_Warehouse
+    schema: dbo
+    tables:
+      - name: tbl_apc_finished_susplus
+      - name: EVENT_RUN_DATE

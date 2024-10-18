@@ -1,0 +1,7 @@
+snapshots:
+  - name: tbl_apc_finished_susplus_person
+    config:
+      schema: mart
+      unique_key: person_id
+      strategy: check
+      check_cols:  all
