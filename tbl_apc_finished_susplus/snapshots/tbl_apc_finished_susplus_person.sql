@@ -1,5 +1,7 @@
 {% snapshot tbl_apc_finished_susplus_person %}
 
+--- Added a comment for testing
+
 {{ config(
         target_schema= 'mart',
         unique_key= 'person_id',
