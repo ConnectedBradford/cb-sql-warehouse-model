@@ -11,5 +11,5 @@ jobs:
   # Build job
   testing:
    runs-on: self-hosted
-    steps:
+   steps:
      - run : echo "This works for u"
