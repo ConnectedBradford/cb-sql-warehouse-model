@@ -7,7 +7,7 @@ on:
 	branches:
 	  - main
   # Triggers the workflow manually from GUI
-  workflow_dispatch:
+workflow_dispatch:
 
 jobs:
   # Build job
