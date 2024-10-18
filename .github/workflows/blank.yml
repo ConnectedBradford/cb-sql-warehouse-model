@@ -2,7 +2,7 @@ name: "dbt prd pipeline"
 
 # Triggers
 on:
-  # Triggers the workflow on push to main branch  
+  # Triggers the workflow on push to main branch  fdsfdsf
   push:
    branches:
     -main
