@@ -1,0 +1,7 @@
+snapshots:
+  - name: dim_person_susplus
+    config:
+      schema: mart
+      unique_key: person_id
+      strategy: check
+      check_cols:  all
