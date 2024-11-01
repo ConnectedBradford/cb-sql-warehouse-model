@@ -1,0 +1,29 @@
+version: 2
+
+models:
+      - name : snapshot_opcs_susplus
+        description: "The table is an unpivoted tables of information contains OPCS code and the dates which is
+                    created from the tbl_apc_finished_susplus table "
+      - name : snapshot_diagnosis_susplus
+        description: "The table is an unpivoted tables of information contains Diagnosis codes  and the dates which is
+                    created from the tbl_apc_finished_susplus table "
+      - name: tbl_op_susplus_data
+        description: "A table of General inforamtion which is sourced from tbl_op_susplus
+                  "
+      - name: dim_person_susplus
+        description: "A Type-2table of General inforamtion which is sourced from tbl_apc_finished_susplus and applied the filter of only
+                  "
+sources:
+  - name: warehouse
+    database: src_StagingDatabase_Warehouse
+    schema: dbo
+    tables:
+      - name: tbl_op_susplus
+      - name: EVENT_RUN_DATE
+      - name: tbl_outpatient
+  - name: mart_model
+    database: CB_MYSPACE_JA_1
+    schema: mart
+    tables:
+      - name: DIM_PERSON_SUSPLUS
+
