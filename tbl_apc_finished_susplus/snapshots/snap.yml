@@ -1,7 +1,3 @@
 snapshots:
-  - name: tbl_apc_finished_susplus_person
-    config:
-      schema: mart
-      unique_key: person_id
-      strategy: check
-      check_cols:  all
+  - name: dim_person_susplus
+    description: "A SCD Type-2 table For Person which is sourced from tbl_apc_finished_susplus "

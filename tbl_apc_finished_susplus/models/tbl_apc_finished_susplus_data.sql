@@ -48,7 +48,7 @@ with source_data as(
         [Home Birth or Delivery]	as	Home_Birth_or_Delivery	,
         [PCT from postcode]	as	PCT_from_postcode	,
         [PCT Type from Postcode]	as	PCT_Type_from_Postcode	
-
+      
 from {{ source('warehouse', 'tbl_apc_finished_susplus') }}
 )
 select * from source_data
