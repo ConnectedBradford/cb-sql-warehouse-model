@@ -1,0 +1,32 @@
+version: 2
+
+models:
+      - name : snapshot_opcs_icd
+        description: "The table is an unpivoted tables of information contains OPCS code and the dates which is
+                    created from the tbl_outpatient table "
+      - name : snapshot_diagnosis_icd
+        description: "The table is an unpivoted tables of information contains Diagnosis codes  and the dates which is
+                    created from the tbl_outpatient table "
+      - name : snapshot_investigation_icd
+        description: "The table is an unpivoted tables of information contains investigation codes  and the dates which is
+                    created from the tbl_outpatient table "
+      - name: tbl_outpatient_data
+        description: "A table of General inforamtion which is sourced from tbl_outpatient
+                  "
+      - name: dim_person
+        description: "A Type-2table of General inforamtion which is sourced from tbl_outpatient and applied the filter of only
+                  "
+sources:
+  - name: warehouse
+    database: src_StagingDatabase_Warehouse
+    schema: dbo
+    tables:
+      - name: tbl_op_susplus
+      - name: EVENT_RUN_DATE
+      - name: tbl_outpatient
+  - name: mart_model
+    database: CB_MYSPACE_JA_1
+    schema: mart
+    tables:
+      - name: DIM_PERSON
+
