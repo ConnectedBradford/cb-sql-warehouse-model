@@ -1,0 +1,18 @@
+version: 2
+
+models:
+      - name : snapshot_treatment
+        description: "The table is an unpivoted tables of information contains Treatment 2 Digit codes " 
+      - name: snapshot_investigation
+        description: "The table is an unpivoted tables of information contains investigation 2 Digit codes "
+      - name: dim_person
+        description: "A Type-2table of General inforamtion which is sourced from tbl_apc_finished_susplus and applied the filter of only
+                  "
+sources:
+  - name: warehouse
+    database: src_StagingDatabase_Warehouse
+    schema: dbo
+    tables:
+      - name: tbl_ec_backward_compatible_susplus
+      - name: tbl_op_susplus
+      - name: EVENT_RUN_DATE
