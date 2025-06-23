@@ -19,7 +19,7 @@ ROW_NUMBER() OVER
 		END_TIME
 		ORDER BY 
 		(CASE 
-			WHEN DIAG_CODE_ORDER='diagnosis_1' THEN 1
+			WHEN DIAG_CODE_ORDER='diagnosis_1' THEN 1 
 			WHEN DIAG_CODE_ORDER='diagnosis_2' THEN 2
 			WHEN DIAG_CODE_ORDER='diagnosis_3' THEN 3
 			WHEN DIAG_CODE_ORDER='diagnosis_4' THEN 4
@@ -78,7 +78,7 @@ ROW_NUMBER() OVER
 						CONVERT(varchar,departure_date_time,112) end_date,
 						CONVERT(VARCHAR, departure_date_time, 108) end_time
 						from 
-						--tbl_ae a
+						--tbl_ae a commented
 						{{ source('warehouse', 'tbl_ae') }}
 						where 
 						 digest is not null
