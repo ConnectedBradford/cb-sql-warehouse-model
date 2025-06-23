@@ -6,7 +6,7 @@ tbl_ae:
       driver: 'ODBC Driver 17 for SQL Server' # (The ODBC Driver installed on your system)
       server: bhts-connectyor
       port: 1433
-      database: CB_MYSPACE_JA_1
+      database: src_StagingDatabase_Warehouse
       schema: mart
       windows_login: True
       trust_cert: True
